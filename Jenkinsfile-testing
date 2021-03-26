@@ -73,6 +73,13 @@ pipeline {
                 git push https://${GIT_USER}:${GIT_TOKEN}@github.com/${GIT_USER}/kube-native ci-release'
             }
         }
+        stage('Deploy') {
+        steps {
+                sh 'BUILDNO=$(echo ${TAG} | sed "s/.*\\.//"); \
+                cd releases; \
+                helm install final --namespace staging demochart-0.0.${BUILDNO}.tgz'
+            }
+        }
     }
 
     post {
