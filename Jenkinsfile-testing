@@ -3,8 +3,8 @@ pipeline {
     agent any    
     
     environment {
-        MSR_FQDN_PORT='<MSR dynamic DNS>:4443'
-        GIT_USER='<GitHub username>'
+        MSR_FQDN_PORT='gm4x9qwtqv6vheaq5-kgeoz3hfcrbfe6slg.labs.strigo.io:4443'
+        GIT_USER='aman-kohli'
     }
 
     stages {
