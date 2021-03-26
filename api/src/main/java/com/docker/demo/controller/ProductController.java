@@ -24,7 +24,8 @@ public class ProductController {
 	@Autowired
 	ProductService productService;
 
-	// -------------------Retrieve All Products---------------------------------------------
+	// -------------------Retrieve All Products.---------------------------------------------
+	// Test comment to trigger a buidl
 
 	@RequestMapping(value = "/products/", method = RequestMethod.GET)
 	public ResponseEntity<List<Product>> listAllProducts() {
